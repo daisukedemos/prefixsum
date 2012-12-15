@@ -18,7 +18,6 @@
  */
 
 #include <cassert>
-#include <iostream>
 #include "PrefixSumLeaf.hpp"
 #include "BitUtil.hpp"
 
@@ -285,7 +284,6 @@ void PrefixSumLeaf::Split(PrefixSumLeaf& ps){
 }
 
 uint64_t PrefixSumLeaf::GetAllocatedBytes() const{
-  cout << "leaf=" << sizeof(bit_arrays_[0]) * bit_arrays_.size() << endl;
   return sizeof(bit_arrays_[0]) * bit_arrays_.size() + sizeof(num_) + sizeof(width_);
 }
 
